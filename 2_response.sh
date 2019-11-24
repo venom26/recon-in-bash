@@ -1,7 +1,8 @@
 #!/bin/bash
-mkdir headers
-mkdir responsebody
 CURRENT_PATH=$(pwd)
+mkdir $CURRENT_PATH/headers
+mkdir $CURRENT_PATH/responsebody
+
 for x in $(cat $1)
 do
         NAME=$(echo $x | awk -F/ '{print $3}')
